@@ -1,0 +1,40 @@
+{
+  "name": "ts-mcp-sse-proxy",
+  "version": "1.0.0",
+  "description": "TypeScript implementation of MCP SSE proxy server with the same API as go-mcp-sse-proxy",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec \"node --loader ts-node/esm\" src/index.ts",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "sse",
+    "proxy",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.24",
+    "@types/url-parse": "^1.4.11",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "limiter": "^3.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "url-parse": "^1.5.10"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "nodemon": "^3.1.10"
+  }
+}

@@ -1,0 +1,69 @@
+# Dependencies (will be installed separately)
+node_modules/
+
+# Development files (keep src/ for build stage)
+*.ts.map
+.env
+.env.*
+!.env.production
+
+# Build artifacts not needed in runtime (but keep dist/ since we copy it in Dockerfile)
+*.tsbuildinfo
+coverage/
+.nyc_output/
+
+# Development tools
+.git/
+.github/
+.gitignore
+.eslintrc*
+.prettierrc*
+.editorconfig
+.vscode/
+.idea/
+
+# Documentation
+README.md
+*.md
+!LICENSE
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+logs/
+
+# Runtime data
+*.pid
+*.pid.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Test files
+test/
+tests/
+spec/
+__tests__/
+*.test.*
+*.spec.*
+
+# Docker related
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Deployment scripts
+deploy.sh
+fly.toml 
